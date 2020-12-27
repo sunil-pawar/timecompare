@@ -21,7 +21,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install bs4 selenium etc
-        run: python -V
+        run: |
+              python3 -V
+              sudo apt-get install python3-setuptools
+
             
       - name: run the main.py 
         run: python3 ./main.py 
