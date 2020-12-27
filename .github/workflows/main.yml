@@ -22,7 +22,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: install bs4 selenium etc
         run: |
-              python3 -V
+              python -V
               pip3 install BeautifulSoup4
               pip3 install bs4
               pip3 install  selenium
@@ -30,4 +30,4 @@ jobs:
 
             
       - name: run the main.py 
-        run: python3 ./main.py 
+        run: python ./main.py 
