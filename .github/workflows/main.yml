@@ -24,6 +24,10 @@ jobs:
         run: |
               python3 -V
               sudo apt-get install python3-setuptools
+              pip3 install BeautifulSoup4
+              pip3 install bs4
+              pip3 install  selenium
+              
 
             
       - name: run the main.py 
