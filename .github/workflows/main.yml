@@ -12,7 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,7 +23,6 @@ jobs:
       - name: install bs4 selenium etc
         run: |
               python3 -V
-              sudo apt-get install python3-setuptools
               pip3 install BeautifulSoup4
               pip3 install bs4
               pip3 install  selenium
