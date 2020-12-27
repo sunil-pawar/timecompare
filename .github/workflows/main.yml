@@ -31,4 +31,6 @@ jobs:
 
             
       - name: run the main.py 
-        run: python ./main.py 
+        run: |
+              python ./main.py 
+              date
