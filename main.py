@@ -7,7 +7,7 @@ import time
 
 
 URL = 'http://ec2-54-184-81-169.us-west-2.compute.amazonaws.com/now'
-#URL = 'https://google.com'
+
 try:
 
     response_code = requests.get(URL).status_code
