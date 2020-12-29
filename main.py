@@ -6,8 +6,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-#URL = 'http://ec2-54-184-81-169.us-west-2.compute.amazonaws.com/now'
-URL = 'https://google.com'
+URL = 'http://ec2-54-203-118-10.us-west-2.compute.amazonaws.com/now/'
+#URL = 'https://google.com'
 try:
 
     response_code = requests.get(URL).status_code
@@ -23,12 +23,12 @@ try:
             py_time = dat.datetime.strptime(current_time,"%H:%M:%S")
             server_time = dat.datetime.strptime(results,"%H:%M:%S")
             if py_time == server_time:
-                print("both the server time and browser time macthes")
-                print("the browser time is " + current_time)
+                print("The clock of the server and the python machine is in sync")
+                print("the python time is " + current_time)
                 print("the server time is " + results)
             else:
-                print("the server time and local time doesnt macth")
-                print("the browser time is " + current_time)
+                print("The clock of the server and the python machine is NOT in sync")
+                print("the python machine time is " + current_time)
                 print("the server time is " + results)
             driver.close()
     else:
