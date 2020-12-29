@@ -6,13 +6,13 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-URL = 'http://ec2-54-184-81-169.us-west-2.compute.amazonaws.com/now'
-
+#URL = 'http://ec2-54-184-81-169.us-west-2.compute.amazonaws.com/now'
+URL = 'https://google.com'
 try:
 
     response_code = requests.get(URL).status_code
     if response_code==200:
-            print("the" +URL+ "is  OK and working with status code" + str(response_code))
+            print("the " +URL+ " is  OK and working with status code " + str(response_code))
             driver = webdriver.Chrome('./chromedriver')
             driver.get(URL)
             html = driver.page_source
@@ -32,8 +32,8 @@ try:
                 print("the server time is " + results)
             driver.close()
     else:
-         print("the "+URL+" is NOT OK as it is responding with statust " +str(response_code) )
+         print("the " +URL+ " is NOT OK as it is responding with status " +str(response_code) )
 except requests.ConnectionError as c:
-    print("The URL is not responding it is NOT OKAY  ...." + str(c))
+    print("The URL is not responding it is NOT OKAY  ....   " + str(c))
 except AttributeError as a:
     print("the URL provided is not intended to be used for the script " + URL)
