@@ -36,4 +36,4 @@ try:
 except requests.ConnectionError as c:
     print("The URL is not responding it is NOT OKAY  ....   " + str(c))
 except AttributeError as a:
-    print("the URL provided is not intended to be used for the script " + URL)
+    print("the URL " +URL+ "  is not intended to be used for the script ")
